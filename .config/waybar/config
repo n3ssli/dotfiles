@@ -1,0 +1,112 @@
+{
+    "layer": "top",
+    "position": "top",
+    "height": 30,
+    "spacing": 3,
+    "margin-top": 6,
+    "margin-left": 8,
+    "margin-right": 8,
+    
+    "modules-left": ["custom/menu", "custom/disk", "hyprland/workspaces"],
+    "modules-center": ["custom/music", "clock", "tray"],
+    "modules-right": ["custom/wallpaper", "network", "memory", "cpu", "pulseaudio", "custom/power"],
+    
+    "custom/menu": {
+        "format": "",
+        "tooltip": false,
+        "on-click": "rofi -theme ~/.config/rofi/dark-menu.rasi -show drun"
+    },
+    
+    "custom/disk": {
+        "format": "󰋊 {}%",
+        "interval": 30,
+        "exec": "df -h / | awk 'NR==2 {print $5}' | sed 's/%//'",
+        "tooltip": true,
+        "tooltip-format": "Disk usage: {}%"
+    },
+
+    "hyprland/workspaces": {
+        "format": "{name}",
+        "persistent_workspaces": {
+            "1": [],
+            "2": [],
+            "3": [],
+            "4": []
+        },
+        "all-outputs": true,
+        "active-only": false
+    },
+    
+    "custom/music": {
+        "format": "󰎈",
+        "return-type": "json",
+        "max-length": 40,
+        "exec": "playerctl metadata --format '{\"text\": \"{{artist}} - {{title}}\", \"tooltip\": \"{{playerName}}: {{artist}} - {{title}}\", \"alt\": \"{{status}}\", \"class\": \"{{status}}\"}' -F || echo '{\"text\": \"\", \"tooltip\": \"No media playing\", \"class\": \"stopped\", \"alt\": \"stopped\"}'",
+        "on-click": "playerctl play-pause",
+        "on-click-right": "playerctl next",
+        "on-click-middle": "playerctl previous",
+        "escape": true
+    },
+    
+    "clock": {
+        "format": "{:%H:%M}",
+        "format-alt": "{:%Y-%m-%d}",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
+    },
+    
+    "pulseaudio": {
+        "format": "{icon} {volume}%",
+        "format-muted": "󰖁 Muted",
+        "format-icons": {
+            "headphone": "󰋋",
+            "hands-free": "",
+            "headset": "󰋎",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["󰕿", "󰖀", "󰕾"]
+        },
+        "on-click": "pavucontrol"
+    },
+    
+    "memory": {
+        "format": "󰍛 {}%",
+        "tooltip": true,
+        "interval": 5
+    },
+    
+    "cpu": {
+        "format": "󰘚 {}%",
+        "tooltip": true,
+        "interval": 5
+    },
+    
+    "network": {
+        "format-wifi": "󰖩 {essid}",
+        "format-ethernet": "󰈀 Connected",
+        "format-linked": "󰈀 Connected",
+        "format-disconnected": "󰅛 Disconnected",
+        "tooltip-format-wifi": "{essid} ({signalStrength}%)",
+        "tooltip-format-ethernet": "{ifname}",
+        "tooltip-format-disconnected": "Disconnected",
+        "on-click": "nm-connection-editor"
+    },
+    
+    "custom/wallpaper": {
+        "format": "󱗆",
+        "tooltip": "Left click for a random wallpaper, right click for the default wallpaper",
+        "on-click": "waypaper --random",
+        "on-click-right": "waypaper --wallpaper /home/nessli/Images/4K/wallpaper.png"
+    },
+    
+    "custom/power": {
+        "format": "󰐥",
+        "tooltip": "Power Menu",
+        "on-click": "wlogout -b 2 -T 400 -B 400"
+    },
+    
+    "tray": {
+        "icon-size": 16,
+        "spacing": 4
+    }
+} 
