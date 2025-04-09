@@ -1,0 +1,222 @@
+# Midnight Purple - A rich dark purple Alacritty theme
+# with enhanced visual elements
+
+# Window Configuration
+[window]
+dimensions = { columns = 100, lines = 30 }
+padding = { x = 12, y = 12 }
+dynamic_padding = true
+decorations = "Full"
+opacity = 0.95
+startup_mode = "Windowed"
+title = "Alacritty"
+dynamic_title = true
+
+# Scrolling
+[scrolling]
+history = 10000
+multiplier = 3
+
+# Font Configuration
+[font]
+normal = { family = "JetBrains Mono Nerd Font", style = "Regular" }
+bold = { family = "JetBrains Mono Nerd Font", style = "Bold" }
+italic = { family = "JetBrains Mono Nerd Font", style = "Italic" }
+bold_italic = { family = "JetBrains Mono Nerd Font", style = "Bold Italic" }
+size = 12.0
+offset = { x = 0, y = 0 }
+glyph_offset = { x = 0, y = 0 }
+
+# Rich Purple Dark Color Scheme
+[colors.primary]
+background = "#1a1525"
+foreground = "#e2d4ff"
+
+[colors.cursor]
+text = "#1a1525"
+cursor = "#d183e8"
+
+[colors.selection]
+text = "#1a1525"
+background = "#a277ff"
+
+[colors.normal]
+black = "#2d2b40"
+red = "#ff6e9c"
+green = "#a5ffaf"
+yellow = "#ffdf8e"
+blue = "#a277ff"
+magenta = "#d183e8"
+cyan = "#79e6f3"
+white = "#e2d4ff"
+
+[colors.bright]
+black = "#4f4b66"
+red = "#ff8aad"
+green = "#c4ffcc"
+yellow = "#ffeab3"
+blue = "#b990ff"
+magenta = "#dfacf2"
+cyan = "#a1edf7"
+white = "#f1e8ff"
+
+# Bell
+[bell]
+animation = "EaseOutExpo"
+duration = 100
+color = "#d183e8"
+
+# Mouse
+[mouse]
+hide_when_typing = true
+
+[[mouse.bindings]]
+mouse = "Middle"
+action = "PasteSelection"
+
+# Cursor
+[cursor]
+style = { shape = "Block", blinking = "On" }
+blink_interval = 750
+blink_timeout = 5
+unfocused_hollow = true
+thickness = 0.15
+
+# Extensive Keybindings
+[[keyboard.bindings]]
+key = "V"
+mods = "Control"
+action = "Paste"
+
+[[keyboard.bindings]]
+key = "C"
+mods = "Control|Shift"
+action = "Copy"
+
+[[keyboard.bindings]]
+key = "Insert"
+mods = "Shift"
+action = "PasteSelection"
+
+[[keyboard.bindings]]
+key = "Plus"
+mods = "Control"
+action = "IncreaseFontSize"
+
+[[keyboard.bindings]]
+key = "Minus"
+mods = "Control"
+action = "DecreaseFontSize"
+
+[[keyboard.bindings]]
+key = "Key0"
+mods = "Control"
+action = "ResetFontSize"
+
+[[keyboard.bindings]]
+key = "PageUp"
+action = "ScrollPageUp"
+
+[[keyboard.bindings]]
+key = "PageDown"
+action = "ScrollPageDown"
+
+[[keyboard.bindings]]
+key = "Home"
+action = "ScrollToTop"
+
+[[keyboard.bindings]]
+key = "End"
+action = "ScrollToBottom"
+
+[[keyboard.bindings]]
+key = "K"
+mods = "Control"
+action = "ScrollLineUp"
+
+[[keyboard.bindings]]
+key = "J"
+mods = "Control"
+action = "ScrollLineDown"
+
+[[keyboard.bindings]]
+key = "F"
+mods = "Alt"
+action = "ToggleFullscreen"
+
+[[keyboard.bindings]]
+key = "F11"
+action = "ToggleFullscreen"
+
+[[keyboard.bindings]]
+key = "T"
+mods = "Control|Shift"
+action = "SpawnNewInstance"
+
+[[keyboard.bindings]]
+key = "W"
+mods = "Control|Shift"
+action = "Quit"
+
+[[keyboard.bindings]]
+key = "Tab"
+mods = "Control"
+action = "SelectNextTab"
+
+[[keyboard.bindings]]
+key = "Tab"
+mods = "Control|Shift"
+action = "SelectPreviousTab"
+
+[[keyboard.bindings]]
+key = "F"
+mods = "Control|Shift"
+action = "SearchForward"
+
+[[keyboard.bindings]]
+key = "B"
+mods = "Control|Shift"
+action = "SearchBackward"
+
+[[keyboard.bindings]]
+key = "H"
+mods = "Alt"
+action = "Left"
+
+[[keyboard.bindings]]
+key = "J"
+mods = "Alt"
+action = "Down"
+
+[[keyboard.bindings]]
+key = "K"
+mods = "Alt"
+action = "Up"
+
+[[keyboard.bindings]]
+key = "L"
+mods = "Alt"
+action = "Right"
+
+[[keyboard.bindings]]
+key = "Return"
+mods = "Control|Shift"
+action = "SpawnNewInstance"
+
+[[keyboard.bindings]]
+key = "L"
+mods = "Control"
+chars = "\u000C"
+
+[[keyboard.bindings]]
+key = "Space"
+mods = "Shift|Control"
+action = "ToggleViMode"
+
+# Debug
+[debug]
+render_timer = false
+persistent_logging = false
+log_level = "Warn"
+print_events = false
+highlight_damage = false

@@ -1,0 +1,72 @@
+# Required Packages for Dotfiles Configuration
+# This file lists all packages needed for the configurations in this dotfiles repository
+
+# Core System Packages
+- sddm (Display Manager)
+- pacman (Package Manager)
+- polkit-kde-agent (Authentication Agent)
+- qt5ct (Qt5 Configuration Tool)
+
+# Window Manager and Related
+- hyprland (Window Manager)
+- hyprpaper (Wallpaper Manager)
+- waybar (Status Bar)
+- rofi (Application Launcher)
+- wl-clipboard (Clipboard Management)
+- cliphist (Clipboard History)
+
+# Terminal and Shell
+- alacritty (Terminal Emulator)
+- bash (Shell)
+
+# File Manager
+- yazi (File Manager)
+
+# System Information
+- neofetch (System Information Tool)
+
+# Additional Dependencies
+# Waybar Modules
+- playerctl (Media Player Control)
+- pavucontrol (Audio Control)
+- networkmanager (Network Management)
+- nm-connection-editor (Network Connection Editor)
+- waypaper (Wallpaper Management)
+- dunst (Notification Daemon)
+
+# System Utilities
+- wlogout (Logout Menu)
+- df (Disk Usage)
+- calendar (Date/Time)
+- tray (System Tray)
+- nm-applet (Network Manager Applet)
+
+# Fonts
+- ttf-font-awesome (Icons)
+- ttf-nerd-fonts-symbols (Nerd Fonts)
+- ttf-jetbrains-mono-nerd (JetBrains Mono Nerd Font)
+- ttf-segoe-ui (Segoe UI Font)
+
+# Audio
+- pulseaudio (Audio System)
+- pavucontrol (Audio Control GUI)
+
+# Network
+- networkmanager (Network Management)
+- nm-connection-editor (Network Connection GUI)
+
+# System Monitoring
+- htop (Process Viewer)
+- lm_sensors (Hardware Monitoring)
+
+# Qt and Wayland
+- qt5-wayland (Qt5 Wayland Support)
+- qt6-wayland (Qt6 Wayland Support)
+- qt5-quickcontrols2 (Qt5 Quick Controls 2)
+- qt5-graphicaleffects (Qt5 Graphical Effects)
+- qt5-declarative (Qt5 Declarative Module)
+- qt5-svg (Qt5 SVG Support)
+- qt5-quickcontrols (Qt5 Quick Controls)
+
+# Note: Some of these packages might be dependencies of the main packages
+# and might be installed automatically when installing the main packages. 

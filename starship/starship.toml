@@ -1,0 +1,23 @@
+# ~/.config/starship/starship.toml
+
+format = """
+[](#a277ff)[⌬](bold #d183e8) [${username}](bold #e2d4ff)[@](bold #b990ff)[${hostname}](bold #e2d4ff) [in](bold #b990ff) [${directory}](bold #e2d4ff) ${git_branch}${git_status}\n\
+[└─>](bold #d183e8) """
+
+[username]
+show_always = true
+style_user = "bold #e2d4ff"
+format = "[$user]($style)"
+
+[directory]
+style = "bold #e2d4ff"
+truncation_length = 3
+truncation_symbol = "…/"
+
+[git_branch]
+style = "bold #a5ffaf"
+format = "[$symbol$branch]($style) "
+symbol = " "
+
+[git_status]
+style = "bold #ffdf8e"

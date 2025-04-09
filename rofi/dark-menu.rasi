@@ -1,0 +1,227 @@
+* {
+    background:         #12121f;
+    background-alt:     #1a1b26;
+    background-light:   #232436;
+    foreground:         #c0caf5;
+    foreground-alt:     #a9b1d6;
+    
+    purple1:            #7b59c0;
+    purple2:            #9d7cd8;
+    purple3:            #bb9af7;
+    purple4:            #c0b3f5;
+    purple5:            #d0bcff;
+    
+    accent1:            #f7768e;
+    accent2:            #9ece6a;
+    accent3:            #e0af68;
+    
+    sidebar-width:      28%;
+    window-padding:     15px;
+    element-padding:    12px 18px;
+    element-spacing:    8px;
+    
+    font-regular:       "JetBrainsMono Nerd Font 11";
+    font-prompt:        "JetBrainsMono Nerd Font Bold 12";
+    font-entry:         "JetBrainsMono Nerd Font 12";
+    font-title:         "JetBrainsMono Nerd Font Bold 14";
+}
+
+window {
+    transparency:       "real";
+    background-color:   @background;
+    text-color:         @foreground;
+    border:             2px;
+    border-radius:      12px;
+    border-color:       @purple2;
+    width:              @sidebar-width;
+    height:             96%;
+    location:           west;
+    anchor:             west;
+    x-offset:           10px;
+    y-offset:           0;
+    padding:            @window-padding;
+}
+
+mainbox {
+    background-color:   transparent;
+    children:           [ inputbar, listview ];
+    spacing:            10px;
+    padding:            5px;
+}
+
+inputbar {
+    children:           [ prompt, entry ];
+    background-color:   @background-alt;
+    text-color:         @foreground;
+    expand:             false;
+    border-radius:      12px;
+    margin:             0px 0px 10px 0px;
+    padding:            0px;
+    position:           north;
+    border:             0px;
+    border-color:       @purple2;
+}
+
+prompt {
+    enabled:            true;
+    padding:            12px;
+    background-color:   @purple1;
+    text-color:         @foreground;
+    border-radius:      10px 0px 0px 10px;
+    font:               @font-prompt;
+    /* Fixed: removed gradient that was causing syntax error */
+    str:                "";
+}
+
+entry {
+    background-color:   @background-light;
+    text-color:         @foreground;
+    placeholder-color:  @foreground-alt;
+    expand:             true;
+    horizontal-align:   0;
+    placeholder:        "Search...";
+    blink:              true;
+    border-radius:      0px 10px 10px 0px;
+    padding:            12px;
+    font:               @font-entry;
+}
+
+listview {
+    background-color:   transparent;
+    columns:            1;
+    lines:              12;
+    spacing:            @element-spacing;
+    cycle:              false;
+    dynamic:            true;
+    layout:             vertical;
+    scrollbar:          true;
+    border:             0px;
+    border-color:       @purple2;
+    border-radius:      0px;
+    margin:             5px 0px 0px 0px;
+}
+
+scrollbar {
+    width:              4px;
+    border:             0;
+    handle-width:       8px;
+    handle-color:       @purple3;
+    background-color:   @background-alt;
+    padding:            0;
+    margin:             0px 2px;
+    border-radius:      10px;
+}
+
+element {
+    background-color:   transparent;
+    text-color:         @foreground;
+    orientation:        horizontal;
+    border-radius:      10px;
+    padding:            @element-padding;
+    spacing:            12px;
+}
+
+element-icon {
+    background-color:   transparent;
+    text-color:         inherit;
+    horizontal-align:   0.5;
+    vertical-align:     0.5;
+    size:               24px;
+    border:             0px;
+}
+
+element-text {
+    background-color:   transparent;
+    text-color:         inherit;
+    expand:             true;
+    horizontal-align:   0;
+    vertical-align:     0.5;
+    margin:             0px 2px;
+    font:               @font-regular;
+}
+
+element normal.normal,
+element alternate.normal {
+    background-color:   transparent;
+    text-color:         @foreground;
+}
+
+element normal.urgent,
+element alternate.urgent {
+    background-color:   @accent1;
+    text-color:         @background;
+    border-radius:      10px;
+}
+
+element normal.active,
+element alternate.active {
+    background-color:   @accent2;
+    text-color:         @background;
+    border-radius:      10px;
+}
+
+element selected.normal {
+    background-color:   @purple2;
+    text-color:         @foreground;
+    border:             0px;
+    border-radius:      10px;
+}
+
+element selected.urgent {
+    background-color:   @accent3;
+    text-color:         @background;
+    border-radius:      10px;
+}
+
+element selected.active {
+    background-color:   @purple3;
+    text-color:         @background;
+    border-radius:      10px;
+}
+
+button {
+    padding:            10px;
+    border-radius:      10px;
+    background-color:   @background-alt;
+    text-color:         @foreground;
+    margin:             5px;
+}
+
+button selected {
+    background-color:   @purple2;
+    text-color:         @background;
+}
+
+message {
+    padding:            5px;
+    border-radius:      10px;
+    background-color:   @background-alt;
+    border:             1px;
+    border-color:       @purple2;
+}
+
+textbox {
+    text-color:         @foreground;
+    background-color:   transparent;
+    padding:            10px;
+}
+
+mode-switcher {
+    enabled:            true;
+    spacing:            10px;
+    margin:             0px 0px 10px 0px;
+    padding:            0px;
+    border:             0px;
+    border-radius:      10px;
+    background-color:   @background-alt;
+}
+
+textbox-custom {
+    expand:             false;
+    str:                "Applications";
+    background-color:   transparent;
+    text-color:         @purple4;
+    font:               @font-title;
+    horizontal-align:   0;
+    padding:            5px 0px 10px 5px;
+}
