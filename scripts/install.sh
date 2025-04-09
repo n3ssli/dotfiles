@@ -140,20 +140,20 @@ mkdir -p ~/.local/share/sddm/themes
 print_status "Copying configuration files..."
 
 # .config files
-cp -r "$(dirname "$0")/../hypr" ~/.config/
-cp -r "$(dirname "$0")/../hyprpaper" ~/.config/
-cp -r "$(dirname "$0")/../yazi" ~/.config/
-cp -r "$(dirname "$0")/../alacritty" ~/.config/
-cp -r "$(dirname "$0")/../rofi" ~/.config/
-cp -r "$(dirname "$0")/../neofetch" ~/.config/
-cp -r "$(dirname "$0")/../waybar" ~/.config/
-cp -r "$(dirname "$0")/../starship/starship.toml" ~/.config/starship.toml
+cp -r "$(dirname "$0")/../.config/alacritty" ~/.config/
+cp -r "$(dirname "$0")/../.config/hypr" ~/.config/
+cp -r "$(dirname "$0")/../.config/hyprpaper" ~/.config/
+cp -r "$(dirname "$0")/../.config/yazi" ~/.config/
+cp -r "$(dirname "$0")/../.config/rofi" ~/.config/
+cp -r "$(dirname "$0")/../.config/neofetch" ~/.config/
+cp -r "$(dirname "$0")/../.config/waybar" ~/.config/
+cp -r "$(dirname "$0")/../.config/starship/starship.toml" ~/.config/starship.toml
 
 # SDDM themes
-sudo cp -r "$(dirname "$0")/../sddm/themes" /usr/share/sddm/
+sudo cp -r "$(dirname "$0")/../.config/sddm/themes" /usr/share/sddm/
 
 # SDDM configuration
-sudo cp "$(dirname "$0")/../sddm/sddm.conf" /etc/sddm.conf
+sudo cp "$(dirname "$0")/../.config/sddm/sddm.conf" /etc/sddm.conf
 
 # Pacman configuration
 sudo cp "$(dirname "$0")/../pacman/pacman.conf" /etc/pacman.conf
