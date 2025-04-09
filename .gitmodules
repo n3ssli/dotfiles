@@ -1,0 +1,6 @@
+[submodule "hypr"]
+	path = hypr
+	url = https://github.com/hyprwm/Hyprland
+[submodule "waybar"]
+	path = waybar
+	url = https://github.com/Alexays/Waybar
