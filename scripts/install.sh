@@ -133,7 +133,7 @@ done
 print_status "Setting up configuration files..."
 
 # Create necessary directories
-mkdir -p ~/.config/{hypr,hyprpaper,yazi,alacritty,rofi,neofetch,waybar,starship}
+mkdir -p ~/.config/{hypr,hyprpaper,yazi,alacritty,rofi,neofetch,waybar,starship,bash,pacman}
 mkdir -p ~/.local/share/sddm/themes
 
 # Copy configurations to their appropriate locations
@@ -156,10 +156,10 @@ sudo cp -r "$(dirname "$0")/../.config/sddm/themes" /usr/share/sddm/
 sudo cp "$(dirname "$0")/../.config/sddm/sddm.conf" /etc/sddm.conf
 
 # Pacman configuration
-sudo cp "$(dirname "$0")/../pacman/pacman.conf" /etc/pacman.conf
+sudo cp "$(dirname "$0")/../.config/pacman/pacman.conf" /etc/pacman.conf
 
 # Bash configuration
-cp "$(dirname "$0")/../.bashrc" ~/.bashrc
+cp "$(dirname "$0")/../.config/bash/.bashrc" ~/.bashrc
 
 # Initialize starship in bash
 if ! grep -q "starship init bash" ~/.bashrc; then
